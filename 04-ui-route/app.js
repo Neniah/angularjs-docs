@@ -34,12 +34,14 @@ angular.module("app", ['ui.router'])
 
 })
 
-.controller("loginCtrl", function()
+.controller("loginCtrl", function($scope, $state)
 {
-
+  $scope.goHome = function(){
+    $state.go("home");
+  }
 })
 
-.controller("registerCtrl", function()
+.controller("usersCtrl", function()
 {
 
 })
