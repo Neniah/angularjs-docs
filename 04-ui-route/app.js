@@ -15,17 +15,12 @@ angular.module("app", ['ui.router'])
     })
     .state('users', {
       url: '/users',
-      templateUrl: 'templates/ursers.html',
-      controller: 'usersCtrl'
-    })
-    .state('users', {
-      url: '/users',
-      templateUrl: 'templates/ursers.html',
+      templateUrl: 'templates/users.html',
       controller: 'usersCtrl'
     })
     .state('editUsers', {
       url: '/users/:id/edit',
-      templateUrl: 'templates/ursers.edit.html',
+      templateUrl: 'templates/users.edit.html',
       controller: function($scope, $stateParams){
         $scope.userId = $stateParams.id;
       }
