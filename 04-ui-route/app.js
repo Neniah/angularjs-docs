@@ -31,7 +31,7 @@ angular.module("app", ['ui.router'])
       }
     })
 
-
+    $urlRouterProvider.otherwise("/");
 })
 
 .controller("homeCtrl", function()
