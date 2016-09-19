@@ -13,7 +13,7 @@ angular.module("app", ["ngRoute"])
     templateUrl: "templates/register.html",
     controller: "registerController"
   })
-  .otherwise({ redirectTo: "/"});
+  .otherwise({ redirectTo: "/" });
 
 })
 
