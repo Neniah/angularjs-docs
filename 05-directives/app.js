@@ -9,7 +9,7 @@ angular.module('app', [])
     restrict: "E",
     template: "<div><p>Nombre: {{ nombre }}, Edad: {{ edad }}</p></div>",
     link: function(scope, element, attrs){
-      scope.bombre = "Jhon";
+      scope.nombre = "Jhon";
       scope.edad = "30";
     }
   }
