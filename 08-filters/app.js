@@ -11,3 +11,11 @@ angular.module('app', [])
 
   ];
 })
+
+.filter("toLower", function(){
+  return function(text){
+    if(text != null){
+      return text.toLowerCase();
+    }
+  }
+})
