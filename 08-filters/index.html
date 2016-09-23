@@ -12,7 +12,33 @@
       <div class="row">
         <h1 class="text-center text-muted">FILTERS <small>AngularJS</small></h1>
 
-        Search: <input ng-model="searchText" name="name" value="">
+        Search: <input ng-model="searchText" class="form-control"><hr>
+        <table class="table">
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Phone
+            </th>
+            <th>
+              Age
+            </th>
+            <tr ng-repeat="user in users | filter: searchText">
+              <td>
+                {{ user.name }}
+              </td>
+              <td>
+                {{ user.phone }}
+              </td>
+              <td>
+                {{ user.age }}
+              </td>
+
+            </tr>
+          </tr>
+
+        </table>
       </div>
     </div>
   </body>
