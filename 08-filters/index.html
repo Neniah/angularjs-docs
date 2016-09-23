@@ -69,7 +69,7 @@
             </th>
             <tr ng-repeat="user in users | filter: search">
               <td>
-                {{ user.name }}
+                {{ user.name | toLower }}
               </td>
               <td>
                 {{ user.phone }}
