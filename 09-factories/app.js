@@ -1,7 +1,7 @@
 angular.module('app', [])
 
 .controller('appCtrl', function($scope, Users){
-
+  $scope.users = Users.get();
 })
 
 .factory("Users", function(){
