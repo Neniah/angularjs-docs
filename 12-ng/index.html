@@ -11,7 +11,9 @@
     <div class="container">
       <h1 class="text-center text-danger">NG <small>AngularJS</small></h1>
 
-
+      <ul class="list-group" ng-repeat="number in numbers" ng-show="numbers.length > 0">
+        <li class="list-group-item">{{ number }}</li>
+      </ul>
     </div>
    </body>
 </html>
