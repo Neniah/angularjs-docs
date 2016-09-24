@@ -14,10 +14,22 @@
       <ul class="list-group" ng-repeat="number in numbers" ng-show="number != 1">
         <li class="list-group-item">{{ number }}</li>
       </ul>
-
+      <hr>
       <div ng-hide="bool === true">
         {{ numbers | json }}
       </div>
+      <hr>
+      <div ng-switch="option">
+        <div ng-switch-when="1">1</div>
+        <div ng-switch-when="2">2</div>
+        <div ng-switch-when="3">3</div>
+        <div ng-switch-default>4</div>
+
+      </div>
+
+      <hr>
+      <img ng-src="angularjs.png" alt="AngularJS" width="300px" />
+
     </div>
    </body>
 </html>
