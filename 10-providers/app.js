@@ -31,6 +31,9 @@ angular.module('app', [])
         if(navigator.appName == "Opera"){
           return "opera";
         }
+      },
+      $get: function(){
+        getBrowser: this.getBrowser()
       }
   }
 })
