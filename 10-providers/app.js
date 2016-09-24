@@ -1,7 +1,7 @@
 angular.module('app', [])
 
-.controller('appCtrl', function($scope){
-
+.controller('appCtrl', function($scope, navigatorInfo){
+  console.log(navigatorInfo.getBrowser)
 })
 
 .provider('navigatorInfo', function(){
@@ -33,7 +33,13 @@ angular.module('app', [])
         }
       },
       $get: function(){
-        getBrowser: this.getBrowser()
+        return {
+          getBrowser: this.getBrowser()
+        }
       }
   }
+})
+
+.config(function(navigatorInfoProvider){
+  console.log(navigatorInfoProvider.getBrowser())
 })
