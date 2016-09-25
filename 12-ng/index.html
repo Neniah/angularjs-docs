@@ -6,6 +6,14 @@
     <script src="./bower_components/angular/angular.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      .option1{
+        background: #2ecc71;
+      }
+      .option2{
+        background: #e67e22;
+      }
+    </style>
   </head>
   <body ng-controller="appCtrl">
     <div class="container">
@@ -29,6 +37,11 @@
 
       <hr>
       <img ng-src="angularjs.png" alt="AngularJS" width="300px" />
+
+      <hr>
+      <div ng-class="{option1: option==1, option2: option == 2}">
+        Selected Option
+      </div>
 
     </div>
    </body>
