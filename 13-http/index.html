@@ -2,7 +2,7 @@
 <html ng-app="app">
   <head>
     <meta charset="utf-8">
-    <title> 12 NG </title>
+    <title> 13 $http </title>
     <script src="./bower_components/angular/angular.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
@@ -11,8 +11,8 @@
     <div class="container">
       <h1 class="text-center text-danger">$http<small>AngularJS</small></h1>
 
-      <ul class="list-group">
-        <li class="list-group-item"></li>
+      <ul class="list-group" ng-repeat="user in usuarios" ng-hide="error">
+        <li class="list-group-item">Name: {{ user.name }}, Age: {{ user.age }}</li>
       </ul>
 
     </div>

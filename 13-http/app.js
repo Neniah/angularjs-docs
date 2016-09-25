@@ -3,7 +3,7 @@ angular.module('app', [])
 .controller('appCtrl', function($scope, UsersFactory){
   UsersFactory.get().then(
     function(users){
-      $scope.users = users.data;
+      $scope.usuarios = users.data;
     },
     function(err){
       $scope.error = err.statusText;
