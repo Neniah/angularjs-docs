@@ -40,6 +40,12 @@ angular.module('app', [])
         data: "username=" + user.username + "&password=" + user.password,
         headers: {'Content-type': 'application/x-www-form-urlencoded' }
       });
+    },
+    remove: function(id){
+      return $http({
+        url: API_URL + "/users/" + user.id,
+        method: 'DELETE'
+      });
     }
   }
 })
