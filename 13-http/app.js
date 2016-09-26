@@ -24,6 +24,14 @@ angular.module('app', [])
         url: API_URL + "/users/" + id,
         method: 'GET'
       });
+    },
+    add: function(user){
+      return $http({
+        url: API_URL + '/users',
+        method: 'POST',
+        data: "username=" + user.username + "&password=" + user.password,
+        headers: {'Content-type': 'application/x-www-form-urlencoded' }
+      });
     }
   }
 })
