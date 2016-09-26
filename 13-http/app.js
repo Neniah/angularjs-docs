@@ -18,6 +18,12 @@ angular.module('app', [])
         url: "users.json",
         method: "GET"
       })
+    },
+    getOne: function(id){
+      return $http({
+        url: API_URL + "/users/" + id,
+        method: 'GET'
+      });
     }
   }
 })
