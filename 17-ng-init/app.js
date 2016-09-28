@@ -27,5 +27,7 @@ angular.module("app", ['ui.router'])
 
 .controller("loginCtrl", function($scope, $state)
 {
-  
+  $scope.loadLoginRequirements = function(){
+    $scope.loginData = $state;
+  }
 })
