@@ -6,6 +6,16 @@ angular.module('app', ["ngResource"])
 })
 
 .controller('appCtrl', function($scope, UsersFactory){
+  $scope.get = function(){
+    UsersFactory.query(
+      function(res){
+        $scope.response = res;
+      },
+      function(err){
+        console.log(err)
+      }
+    )
+  }
 
 })
 
