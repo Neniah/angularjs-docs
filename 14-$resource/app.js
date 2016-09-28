@@ -27,6 +27,17 @@ angular.module('app', ["ngResource"])
       })
   }
 
+  $scope.post = function(){
+    UsersFactory.save("title=Libro2&author=Autor&isbn=12232093853093").$promise.then(
+      function(res){
+        $scope.response = res;
+      },
+      function(err){
+        console.log(err)
+      }
+    )
+  }
+
 })
 
 .factory("UsersFactory", function($resource){
