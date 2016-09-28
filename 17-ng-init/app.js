@@ -20,10 +20,12 @@ angular.module("app", ['ui.router'])
 
 .controller("homeCtrl", function($scope, $state)
 {
-
+  $scope.loadHomeRequirements = function(){
+    $scope.homeData = $state;
+  }
 })
 
 .controller("loginCtrl", function($scope, $state)
 {
-
+  
 })
