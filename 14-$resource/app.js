@@ -10,5 +10,14 @@ angular.module('app', ["ngResource"])
 })
 
 .factory("UsersFactory", function($resource){
-  return $resource("http://localhost/php/slimrest/books/:id")
+  return $resource("http://localhost/php/slimrest/books/:id",
+    {id: "@id"},
+    {
+      update: {
+        method: "PUT",
+        params: {id: "@id"},
+        headers: {'Content-type' : "application/x-www-form-urlencoded; charset=UTF-8"}
+      }
+    }
+)
 })
