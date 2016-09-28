@@ -21,13 +21,13 @@ angular.module("app", ['ui.router'])
 .controller("homeCtrl", function($scope, $state)
 {
   $scope.loadHomeRequirements = function(){
-    $scope.homeData = $state;
+    $scope.homeData = $state.current;
   }
 })
 
 .controller("loginCtrl", function($scope, $state)
 {
   $scope.loadLoginRequirements = function(){
-    $scope.loginData = $state;
+    $scope.loginData = $state.current;
   }
 })
