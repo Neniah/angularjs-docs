@@ -1,4 +1,5 @@
-Login
-<p>
-  <button type="button" class="btn btn-default" ng-click="goHome()">Go Home</button>
-</p>
+<div class="row" ng-init="loadLoginRequirements()">
+  <pre>
+    {{ loginData | json:4 }}
+  </pre>
+</div>

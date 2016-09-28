@@ -25,12 +25,5 @@ angular.module("app", ['ui.router'])
 
 .controller("loginCtrl", function($scope, $state)
 {
-  $scope.goHome = function(){
-    $state.go("home");
-  }
-})
-
-.controller("usersCtrl", function()
-{
 
 })
