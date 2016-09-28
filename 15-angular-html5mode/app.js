@@ -1,6 +1,6 @@
 angular.module("app", ["ngRoute"])
 
-.config(function($routeProvider){
+.config(function($routeProvider, $locationProvider){
   $routeProvider.when("/home", {
     templateUrl: "templates/home.html",
     controller: "homeController"
@@ -14,6 +14,8 @@ angular.module("app", ["ngRoute"])
     controller: "registerController"
   })
   .otherwise({ redirectTo: "/" });
+
+  $locationProvider.html5Mode(true);
 
 })
 
