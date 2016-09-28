@@ -4,8 +4,16 @@ angular.module('app', [])
   API_URL: "htpp://api.com",
   HOMEPATH: "#/home",
   LOGINPATH: "#/login"
-});
+})
 
-.controller('appCtrl', function($scope, CONFIG){
+.controller('appCtrl', function($scope, UsersFactory){
+  console.log(UsersFactory.config());
+})
 
+.factory("UsersFactory", function(CONFIG){
+  return {
+    config: function(){
+      return CONFIG.API_URL
+    }
+  }
 })
