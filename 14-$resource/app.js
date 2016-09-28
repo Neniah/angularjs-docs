@@ -33,7 +33,18 @@ angular.module('app', ["ngResource"])
         $scope.response = res;
       },
       function(err){
-        console.log(err)
+        console.log(err);
+      }
+    )
+  }
+
+  $scope.put = function(){
+    UsersFactory.update({id: 4}, "title=Libro4444&author=Autor&isbn=12232093853093").$promise.then(
+      function(res){
+        $scope.response = res;
+      },
+      function(err){
+        console.log(err);
       }
     )
   }
