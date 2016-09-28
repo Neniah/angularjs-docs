@@ -17,6 +17,16 @@ angular.module('app', ["ngResource"])
     )
   }
 
+  $scope.getById = function(id){
+    UsersFactory.get({id: id},
+      function(res){
+        $scope.response = res;
+      },
+      function(err){
+        console.log(err);
+      })
+  }
+
 })
 
 .factory("UsersFactory", function($resource){
