@@ -49,6 +49,17 @@ angular.module('app', ["ngResource"])
     )
   }
 
+  $scope.delete = function(){
+    UsersFactory.delete({id: 4}).promise.then(
+      function(res){
+        $scope.response = res;
+      },
+      function(err){
+        console.log(err);
+      }
+    )
+  }
+
 })
 
 .factory("UsersFactory", function($resource){
