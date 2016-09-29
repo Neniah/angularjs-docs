@@ -24,8 +24,8 @@
                   name="email"
                   value=""
                   class="form-control"
-                  required
-                  ng-model="user.email">
+                  ng-model="user.email"
+                  required>
               </div>
 
               <div class="" ng-message="registerForm.email.$error" ng-show="registerForm.email.$touched">
@@ -33,7 +33,47 @@
 
                 </div>
               </div>
+
+
+              <div class="form-group">
+                <label for="name">User Name</label>
+                <input type="text"
+                  name="username"
+                  value=""
+                  class="form-control"
+                  ng-model="user.username"
+                  ng-minlength="3"
+                  ng-maxlength="10"
+                  required>
+              </div>
+
+              <div class="" ng-message="registerForm.username.$error" ng-show="registerForm.username.$touched">
+                <div class="" ng-messages-include="messages.html">
+
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="name">Password</label>
+                <input type="password"
+                  name="pasword"
+                  value=""
+                  class="form-control"
+                  ng-model="user.password"
+                  ng-minlength="6"
+                  required>
+              </div>
+
+              <div class="" ng-message="registerForm.password.$error" ng-show="registerForm.password.$touched">
+                <div class="" ng-messages-include="messages.html">
+
+                </div>
+              </div>
+
+
             </div>
+
+
           </fieldset>
         </form>
         </div>
