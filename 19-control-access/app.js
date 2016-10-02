@@ -12,5 +12,16 @@ angular.module("app", ["ui.router", "ngMessages", "ngStorage"])
       templateUrl: "templates/dashboard.html",
       controller: "dashboardCtrl"
     })
+    .state("app.users",{
+      url: "/users",
+      templateUrl: "templates/users.html",
+      controller: "usersCtrl"
+    })
+    .state("app.dashboard",{
+      url: "/dashboard",
+      templateUrl: "templates/dashboard.html",
+      controller: "dashboardCtrl"
+    })
+
   $urlRouteProvider.otherwise("/");
 })
