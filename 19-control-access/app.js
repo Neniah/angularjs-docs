@@ -10,17 +10,21 @@ angular.module("app", ["ui.router", "ngMessages", "ngStorage"])
     .state("app.dashboard",{
       url: "/dashboard",
       templateUrl: "templates/dashboard.html",
-      controller: "dashboardCtrl"
+      controller: "dashboardCtrl",
+      authenticate: true
     })
     .state("app.users",{
       url: "/users",
       templateUrl: "templates/users.html",
-      controller: "usersCtrl"
+      controller: "usersCtrl",
+      authenticate: true
+
     })
     .state("app.login",{
       url: "/login",
       templateUrl: "templates/login.html",
-      controller: "loginCtrl"
+      controller: "loginCtrl",
+      authenticate: false
     })
 
   $urlRouteProvider.otherwise("/");
