@@ -1,0 +1,9 @@
+<ol class="breadcrumb" ng-show="!$storage || $storage == undefined">
+  <li><a ui-sref="app.login">Login</a></li>
+</ol>
+<ol class="breadcrumb" ng-show="$storage.email">
+  <li><a ui-sref="app.dashboard">Dashboard</a></li>
+  <li><a ui-sref="app.users">Users</a></li>
+  <li><a ng-click="logout()">Logout</a></li>
+
+</ol>
