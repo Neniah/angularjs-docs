@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-controller="MyController">
+      <h1>Hello {{clock}}</h1>
+    </div>
+    <script type="text/javascript" >
+      function MyController($scope){
+        $scope.clock = new Date();
+        var updateClock = function(){
+          $scope.clock = new Date();
+        };
+        setInterval(function(){
+          $scope.$apply(updateClock);
+        }, 1000);
+        updateClock();
+      };
+    </script>
+  </body>
+</html>
