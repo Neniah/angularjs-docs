@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
     <title>Simple App</title>
     <link rel="stylesheet" href="bootstrap.css" media="screen" title="no title">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="../angularjs/angular.js"></script>
   </head>
   <body>
     <div class="container">
@@ -16,7 +16,11 @@
       </div>
     </div>
     <script type="text/javascript" >
-
+      app.controller('FirstController', function($scope){
+        $scope.counter = 0;
+        $scope.add = function(amount) { $scope.counter += amount; };
+        $scope.subtract = function(amount) { $scope.counter -= amount; };
+      });
     </script>
   </body>
 </html>
