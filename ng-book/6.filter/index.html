@@ -23,21 +23,25 @@
                  ensure-unique="username" required>
           <div class="error" ng-show="signup_form.username.$dirty && signup_form.username.$invalid">
             <small class="error" ng-show="signup_form.username.$error.required">
-              Please input a username
+              Please input a username.
             </small>
             <small class="error" ng-show="signup_form.username.$error.minlength">
-              Your username is required to be at least 3 characters
+              Your username is required to be at least 3 characters.
             </small>
             <small class="error" ng-show="signup_form.username.$error.maxlength">
-              Your username is required to be longer than 20 characters
+              Your username is required to be longer than 20 characters.
             </small>
             <small class="error" ng-show="signup_form.username.$error.unique">
-              That username is taken, please try another
+              That username is taken, please try another.
             </small>
           </div>
         </div>
       </div>
     </div>
 
+
+    <script type="text/javascript" src="app.js">
+
+    </script>
   </body>
 </html>
