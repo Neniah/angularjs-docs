@@ -1,0 +1,24 @@
+
+
+.title{
+
+  position:relative;
+  float:left;
+  font-size:2em;
+}
+
+.price{
+  background: #2ecc71;
+  border-radius: 80px;
+  padding:30px 12px;
+  position:relative;
+  float:right;
+  color:#fff;
+  font-size:1.6em;
+  margin-right: 0;
+}
+
+.thumbnail{
+  background:#ecf0f1;
+  padding:25%;
+}
