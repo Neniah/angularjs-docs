@@ -28,7 +28,10 @@
                          ng-minlength=3
                          ng-maxlength=20
                          ensure-unique="username" required ng-focus>
-                  <div class="error" ng-show="signup_form.username.$dirty && signup_form.username.$invalid">
+                  <div class="error"
+                        ng-show="signup_form.username.$dirty &&
+                          signup_form.username.$invalid &&
+                          !signup_form.name.$focused">
                     <small class="error" ng-show="signup_form.username.$error.required">
                       Please input a username.
                     </small>
