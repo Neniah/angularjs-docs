@@ -1,5 +1,6 @@
 app.controller('MainController', [
   '$scope', function($scope){
-    $scope.title = 'Top Sellers in Books';
+    $scope.title = 'English Books';
+    $scope.promo = 'Small steps, Big changes';
   }
 ]);
