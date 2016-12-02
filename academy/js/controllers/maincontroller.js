@@ -14,6 +14,18 @@ app.controller('MainController', [
      price: 8,
      pubdate: new Date('2013', '08', '01'),
      cover: 'img/pendulum.jpg'
+   },
+   {
+     name: 'The Book of the Secrets',
+     price: 23,
+     pubdate: new Date('2013', '08', '01'),
+     cover: 'img/pendulum.jpg'
+   },
+   {
+     name: 'The old man and the sea',
+     price: 12,
+     pubdate: new Date('2013', '08', '01'),
+     cover: 'img/pendulum.jpg'
    }
  ];
   }
