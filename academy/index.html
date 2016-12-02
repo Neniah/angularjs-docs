@@ -26,7 +26,7 @@
           <div class="thumbnail">
             <p class="title"> {{product.name | uppercase }}</p>
             <p class="date"> {{product.pubdate | date}} </p>
-            <img src="img/the8.jpg">
+            <img ng-src="{{product.cover}}">
 
             <p class="price"> {{product.price | currency}} </p>
 
