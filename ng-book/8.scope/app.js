@@ -4,5 +4,14 @@ var app = angular.module('app', [])
 
 })
 .controller('ParentController', function($scope){
-  
+  $scope.parentProperty = 'parent scope';
+})
+.controller('ChildController', function($scope){
+  $scope.childProperty = 'child scope';
+
+  $scope.fullSentenceFromChild
+    = 'Same $scope: We can access: ' +
+    $scope.rootProperty + ' and ' +
+    $scope.parentProperty + ' and ' +
+    $scope.childProperty
 });
