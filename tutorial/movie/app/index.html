@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title">
     <!-- endbuild -->
   </head>
   <body ng-app="movieApp">
@@ -49,7 +50,9 @@
     </div>
 
     <div class="container">
-    <div ng-controller="MainCtrl"></div>
+    <div ng-controller="MainCtrl">
+      <h1 class="text-center">{{title}}</h1>
+    </div>
     </div>
 
     <div class="footer">
@@ -76,9 +79,11 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="../bower_components/angular/angular.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>

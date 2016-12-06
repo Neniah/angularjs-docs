@@ -1,0 +1,22 @@
+{
+  "name": "angular-movie",
+  "homepage": "https://github.com/Neniah/angularjs-docs",
+  "authors": [
+    "Maria Lobillo <maria.lobillo.santos@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}

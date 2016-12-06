@@ -9,9 +9,5 @@
  */
 angular.module('movieApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    this.title = 'Thank you for visit our website.';
   });
