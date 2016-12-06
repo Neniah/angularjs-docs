@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="movieApp">
   <head>
     <meta charset="utf-8">
     <title>Movie Mania</title>
@@ -9,11 +9,15 @@
     <div class="container">
       <div class="row">
         <h1 class="text-center">Movie Mania</h1>
+        <div ng-controller="mainController">
+          <h3 class="text-center">{{title}}</h3>
+        </div>
       </div>
     </div>
 
 
     <!-- Scripts -->
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="../app/app.js"></script>
     <script type="text/javascript" src="../app/controllers/mainController.js"></script>
 
