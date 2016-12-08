@@ -6,4 +6,7 @@ app.config(['routeProvider', function($routeProvider){
      template: 'main.html',
      controller: 'MainController'
    });
+}])
+.controller('MainController', [function(){
+  console.log('This is the MainController');
 }]);
