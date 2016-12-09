@@ -8,6 +8,6 @@ app.config(['routeProvider', function($routeProvider){
    }).
    otherwise({redirectTo:'/main'})
 }])
-.controller('MainController','$scope', [function($scope){
+.controller('MainController', ['$scope', function($scope){
   console.log($scope);
 }]);
