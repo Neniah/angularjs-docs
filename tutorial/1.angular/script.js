@@ -9,5 +9,6 @@ app.config(['routeProvider', function($routeProvider){
    otherwise({redirectTo:'/main'})
 }])
 .controller('MainController', ['$scope', function($scope){
+  $scope.person = 'Jhon Doe';
   console.log($scope);
 }]);
