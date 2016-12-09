@@ -5,7 +5,8 @@ app.config(['routeProvider', function($routeProvider){
    when('/main',{
      template: 'main.html',
      controller: 'MainController'
-   });
+   }).
+   otherwise({redirectTo:'/main'})
 }])
 .controller('MainController', [function(){
   console.log('This is the MainController');
