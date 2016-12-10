@@ -19,8 +19,10 @@ app.config(['routeProvider', function($routeProvider){
    }).
    otherwise({redirectTo:'/main'})
 }])
-.controller('ServicesController', ['$scope', function($scope){
-
+.controller('ServicesController', ['$scope', "$http", function($scope, $http){
+  $http.get("services.json").then(function(response){
+    console.log(response);
+  });
 
 }])
 .controller('ContactController', ['$scope', function($scope){
