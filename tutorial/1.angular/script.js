@@ -12,14 +12,22 @@ app.config(['routeProvider', function($routeProvider){
    }).
    when('/services',{
      template: 'services.html',
-     controller: 'MainController'
+     controller: 'ServicesController'
    }).when('/contact',{
      template: 'contact.html',
      controller: 'ContactController'
    }).
    otherwise({redirectTo:'/main'})
 }])
+.controller('ServicesController', ['$scope', function($scope){
+
+
+}])
+.controller('ContactController', ['$scope', function($scope){
+
+
+}])
 .controller('MainController', ['$scope', function($scope){
-  $scope.person = 'Jhon Doe';
-  console.log($scope);
+
+
 }]);
