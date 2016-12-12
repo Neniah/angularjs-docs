@@ -1,9 +1,10 @@
+'use strict';
+
 angular.module('templateStore.templates', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider){
-  $routeProvider.
-    when('/tempates', {
-      templatesUrl: 'templates/templates.html',
+  $routeProvider.when('/tempates', {
+      templateUrl: 'templates/templates.html',
       controller: 'TemplatesController'
     });
 }])
