@@ -7,7 +7,13 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="container" ng-init="names=['Dave', 'Napur', 'Heedy', 'Shriva']">
+
+      <h3>Looping whith the ng-repeat Directive</h3>
+      <ul>
+        <li ng-repeat="name in names">{{name}}</li>
+      </ul>
+
       Name: <input type="text" ng-model="name"> {{name}}
     </div>
 
