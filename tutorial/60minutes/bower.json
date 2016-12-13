@@ -1,0 +1,17 @@
+{
+  "name": "60minutes",
+  "homepage": "https://github.com/Neniah/angularjs-docs",
+  "authors": [
+    "Maria Lobillo <maria.lobillo.santos@gmail.com>"
+  ],
+  "description": "angularjs tutorial",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
