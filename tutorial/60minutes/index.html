@@ -7,18 +7,14 @@
   </head>
   <body ng-init="customers=[{name: 'Pepito Perez', city: 'New York'}, {name: 'Juanito Banana', city: 'San Francisco'}, {name: 'Manuel Gonzalez', city: 'London'}]">
 
-    <div class="container">
-      <div class="row">
-        <h1 class="text-center">Filter</h1>
-        <div class="row">
-          Name: <br>
-          <input type="text" ng-model="name">{{name}}
-        </div>
-        <ul>
-          <li ng-repeat="customer in customers">{{customer.name}} - {{customer.city}}</li>
-        </ul>
-      </div>
+    <div class="container" ng-controller="SimpleController">
+      <h3>Adding a Simple Controller</h3>
 
+      <ul>
+        <li ng-repeat="cust in customers">
+          {{cust.name}} - {{cust.city}}
+        </li>
+      </ul>
     </div>
 
 
@@ -27,7 +23,14 @@
 
 
     <script type="text/javascript">
-
+    function SimpleController($scope){
+      $scope.customers = [
+        {name: 'Dave Jones', city: 'Phoenix'},
+        {name: 'Jamie Riley', city: 'Atlanta'},
+        {name: 'Heedy Watling', city: 'New York'},
+        {name: 'Thomas Winter', city: 'Seattle'},
+      ];
+    }
     </script>
     <script type="text/javascript" src="bower_components/angular/angular.min.js">
 
