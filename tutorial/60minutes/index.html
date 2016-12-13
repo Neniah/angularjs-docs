@@ -5,17 +5,25 @@
     <title>Angularjs in 60 minutes</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   </head>
-  <body>
+  <body ng-init="customers=[{name: 'Pepito Perez', city: 'New York'}, {name: 'Juanito Banana', city: 'San Francisco'}, {name: 'Manuel Gonzalez', city: 'London'}]">
 
-    <div class="container" ng-init="names=['Dave', 'Napur', 'Heedy', 'Shriva']">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center">Filter</h1>
+        <div class="row">
+          Name: <br>
+          <input type="text" ng-model="name">{{name}}
+        </div>
+        <ul>
+          <li ng-repeat="customer in customers">{{customer.name}} - {{customer.city}}</li>
+        </ul>
+      </div>
 
-      <h3>Looping whith the ng-repeat Directive</h3>
-      <ul>
-        <li ng-repeat="name in names">{{name | uppercase}}</li>
-      </ul>
-
-      Name: <input type="text" ng-model="name"> {{name}}
     </div>
+
+
+
+
 
 
     <script type="text/javascript">
