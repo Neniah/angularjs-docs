@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='demoApp'>
   <head>
     <meta charset="utf-8">
     <title>Angularjs in 60 minutes</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   </head>
-  <body ng-init="customers=[{name: 'Pepito Perez', city: 'New York'}, {name: 'Juanito Banana', city: 'San Francisco'}, {name: 'Manuel Gonzalez', city: 'London'}]">
+  <body>
 
     <div class="container" ng-controller="SimpleController">
       <h3>Adding a Simple Controller</h3>
@@ -16,24 +16,18 @@
         </li>
       </ul>
     </div>
-
-
-
-
-
-
     <script type="text/javascript">
-    function SimpleController($scope){
+    var demoApp = angular.module('demoApp', [])
+    .controller('SimpleController', function($scope){
       $scope.customers = [
         {name: 'Dave Jones', city: 'Phoenix'},
         {name: 'Jamie Riley', city: 'Atlanta'},
         {name: 'Heedy Watling', city: 'New York'},
         {name: 'Thomas Winter', city: 'Seattle'},
       ];
-    }
-    </script>
-    <script type="text/javascript" src="bower_components/angular/angular.min.js">
+    });
 
     </script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
   </body>
 </html>
