@@ -1,0 +1,17 @@
+{
+  "name": "guessanumber",
+  "homepage": "https://github.com/Neniah/angularjs-docs",
+  "authors": [
+    "Maria Lobillo <maria.lobillo.santos@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
