@@ -1,6 +1,9 @@
-function helloWorld(name){
-  return "Hello World!! I'm " + nombre;
+function helloWorld(ename){
+  return "Hello World!! I'm " + ename;
 }
 
 var name = "María Lobillo Santos";
-document.getElementById('container').innerHTML = helloWorld(name);
+var resultado = helloWorld(name);
+
+var etiqueta = <HTMLElement>document.getElementById('container');
+etiqueta.innerHTML = resultado;
