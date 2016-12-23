@@ -25,6 +25,16 @@ if (a === 7) {
 console.log("Out of IF Statement : " + a + " - " + b);
 // Functions
 function getNumber(num) {
+    return "Number: " + num;
+}
+function getString(text) {
+    if (text == "hello") {
+        var num = 66;
+    }
+    else {
+        var num = 90;
+    }
     return num;
 }
 alert(getNumber(34));
+alert(getString('hello'));
