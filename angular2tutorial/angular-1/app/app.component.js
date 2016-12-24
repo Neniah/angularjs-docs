@@ -20,12 +20,13 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.title = "Hello World";
+                    this.title = "MOVIES : ANGULAR 2";
+                    this.movie = "Batman vs Superman";
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "my-app",
-                        template: "<h1>{{title}} from Angular2</h1>"
+                        template: "<h1>{{title}}</h1><p>{{movie}}</p>"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

@@ -2,8 +2,9 @@ import { Component } from "angular2/core"
 
 @Component({
   selector: "my-app",
-  template: "<h1>{{title}} from Angular2</h1>"
+  template: "<h1>{{title}}</h1><p>{{movie}}</p>"
 })
 export class AppComponent{
-  public title = "Hello World";
+  public title = "MOVIES : ANGULAR 2";
+  public movie =  "Batman vs Superman";
 }
