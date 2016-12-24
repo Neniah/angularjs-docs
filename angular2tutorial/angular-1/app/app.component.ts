@@ -2,7 +2,7 @@ import { Component } from "angular2/core"
 
 @Component({
   selector: "my-app",
-  template: "<h1>{{title}}</h1><p>Title : {{movie}} <br> Director: {{director}} <br> Year: {{year}}</p>"
+  templateUrl:"app/view/movies.html"
 })
 export class AppComponent{
   public title:string = "MOVIES : ANGULAR 2";
