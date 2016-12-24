@@ -20,10 +20,10 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.title = "MOVIES : ANGULAR 2";
-                    this.movie = "Batman vs Superman";
-                    this.director = "Zack Snider";
-                    this.year = 2016;
+                    this.title = "Movies with Angular 2";
+                    this.movie = "The Revenant";
+                    this.director = "Alejandro Gonzalez";
+                    this.year = 2015;
                 }
                 AppComponent = __decorate([
                     core_1.Component({

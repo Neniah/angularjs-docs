@@ -5,8 +5,15 @@ import { Component } from "angular2/core"
   templateUrl:"app/view/movies.html"
 })
 export class AppComponent{
-  public title:string = "MOVIES : ANGULAR 2";
-  public movie:string =  "Batman vs Superman";
-  public director:string = "Zack Snider";
-  public year:number = 2016;
+  public title:string;
+  public movie:string;
+  public director:string;
+  public year:number;
+
+  constructor(){
+    this.title = "Movies with Angular 2"
+    this.movie = "The Revenant";
+    this.director = "Alejandro Gonzalez";
+    this.year = 2015;
+  }
 }
