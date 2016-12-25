@@ -1,4 +1,5 @@
 import { Component } from "angular2/core"
+import { Movie } from "./model/movie"
 
 @Component({
   selector: "my-app",
@@ -6,14 +7,10 @@ import { Component } from "angular2/core"
 })
 export class AppComponent{
   public title:string;
-  public movie:string;
-  public director:string;
-  public year:number;
+  public movie:Movie;
+
 
   constructor(){
-    this.title = "Movies with Angular 2"
-    this.movie = "The Revenant";
-    this.director = "Alejandro Gonzalez";
-    this.year = 2015;
+    this.movie = new Movie(1, "Batman vs Superman", "Zack Snider", 2016);
   }
 }
