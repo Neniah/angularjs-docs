@@ -24,7 +24,11 @@ System.register(["angular2/core", "./model/movie"], function(exports_1, context_
             AppComponent = (function () {
                 function AppComponent() {
                     this.movie = new movie_1.Movie(1, "Batman vs Superman", "Zack Snider", 2016);
+                    this.debug();
                 }
+                AppComponent.prototype.debug = function () {
+                    console.log(this.movie);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "my-app",

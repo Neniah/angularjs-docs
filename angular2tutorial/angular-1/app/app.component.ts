@@ -12,5 +12,10 @@ export class AppComponent{
 
   constructor(){
     this.movie = new Movie(1, "Batman vs Superman", "Zack Snider", 2016);
+    this.debug();
+  }
+
+  debug(){
+    console.log(this.movie);
   }
 }
