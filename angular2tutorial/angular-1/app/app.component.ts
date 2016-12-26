@@ -25,5 +25,14 @@ export class AppComponent{
     this.showdata = value;
   }
 
+  onLog(title = null){
+    if (title != null){
+      console.log(this.movie);
+    } else {
+      console.log(this.movie.title);
+    }
+
+  }
+
 
 }

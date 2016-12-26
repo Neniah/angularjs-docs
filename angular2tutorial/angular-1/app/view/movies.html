@@ -11,3 +11,7 @@
     Year: <strong>{{movie.year}}</strong>
   </p>
 </div>
+<div class="row">
+  Change Title:
+  <input type="text" (keypress)="onLog(true)"  [(ngModel)]="movie.title">
+</div>

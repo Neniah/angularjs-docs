@@ -34,6 +34,15 @@ System.register(["angular2/core", "./model/movie"], function(exports_1, context_
                 AppComponent.prototype.onSelect = function (value) {
                     this.showdata = value;
                 };
+                AppComponent.prototype.onLog = function (title) {
+                    if (title === void 0) { title = null; }
+                    if (title != null) {
+                        console.log(this.movie);
+                    }
+                    else {
+                        console.log(this.movie.title);
+                    }
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "my-app",
