@@ -4,3 +4,7 @@ h1{
   text-decoration: underline;
   line-height: 10px;
 }
+
+.showingData{
+  display: none;
+}

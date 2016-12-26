@@ -21,7 +21,11 @@ export class AppComponent{
     console.log(this.movie);
   }
 
-  onSelect(){
+  showData(){
     this.showdata = true;
+  }
+
+  hideData(){
+    this.showdata = false;
   }
 }

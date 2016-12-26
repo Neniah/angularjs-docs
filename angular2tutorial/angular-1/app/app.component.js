@@ -31,8 +31,11 @@ System.register(["angular2/core", "./model/movie"], function(exports_1, context_
                 AppComponent.prototype.debug = function () {
                     console.log(this.movie);
                 };
-                AppComponent.prototype.onSelect = function () {
+                AppComponent.prototype.showData = function () {
                     this.showdata = true;
+                };
+                AppComponent.prototype.hideData = function () {
+                    this.showdata = false;
                 };
                 AppComponent = __decorate([
                     core_1.Component({
