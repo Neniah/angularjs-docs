@@ -21,11 +21,9 @@ export class AppComponent{
     console.log(this.movie);
   }
 
-  showData(){
-    this.showdata = true;
+  onSelect(value){
+    this.showdata = value;
   }
 
-  hideData(){
-    this.showdata = false;
-  }
+
 }
