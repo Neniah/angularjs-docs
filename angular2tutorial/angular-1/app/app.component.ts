@@ -26,7 +26,7 @@ export class AppComponent{
   }
 
   onLog(title = null){
-    if (title != null){
+    if (title == null){
       console.log(this.movie);
     } else {
       console.log(this.movie.title);
