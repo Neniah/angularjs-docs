@@ -1,9 +1,11 @@
 <h1>{{title}}</h1>
 <h3>Movie list</h3>
-<p>
-Title : <strong>{{movie.title}}</strong>
-<br>
-Director: <strong>{{movie.director}}</strong>
-<br>
-Year: <strong>{{movie.year}}</strong>
-</p>
+<div class="row" NgIf="showdata === true">
+  <p>
+    Title : <strong>{{movie.title}}</strong>
+  <br>
+    Director: <strong>{{movie.director}}</strong>
+  <br>
+    Year: <strong>{{movie.year}}</strong>
+  </p>
+</div>
