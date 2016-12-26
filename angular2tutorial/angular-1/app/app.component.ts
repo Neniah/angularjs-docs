@@ -3,10 +3,11 @@ import { Movie } from "./model/movie"
 
 @Component({
   selector: "my-app",
-  templateUrl:"app/view/movies.html"
+  templateUrl:"app/view/movies.html",
+  styleUrls: ["../assets/css/styles.css"]
 })
 export class AppComponent{
-  public title:string;
+  public title:string = "Movies on Angular 2";
   public movie:Movie;
 
 

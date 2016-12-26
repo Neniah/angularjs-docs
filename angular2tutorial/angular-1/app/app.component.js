@@ -23,6 +23,7 @@ System.register(["angular2/core", "./model/movie"], function(exports_1, context_
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.title = "Movies on Angular 2";
                     this.movie = new movie_1.Movie(1, "Batman vs Superman", "Zack Snider", 2016);
                     this.debug();
                 }
@@ -32,7 +33,8 @@ System.register(["angular2/core", "./model/movie"], function(exports_1, context_
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "my-app",
-                        templateUrl: "app/view/movies.html"
+                        templateUrl: "app/view/movies.html",
+                        styleUrls: ["../assets/css/styles.css"]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
