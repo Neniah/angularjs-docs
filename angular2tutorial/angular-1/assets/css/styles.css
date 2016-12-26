@@ -1,3 +1,10 @@
+.container{
+  width:80%;
+  margin:50px auto;
+
+
+}
+
 h1{
   font-family: Arial, Helvetica;
   color: #444;
