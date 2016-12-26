@@ -11,14 +11,17 @@ export class AppComponent{
   public movie:Movie;
   public showdata:boolean;
 
-
   constructor(){
-    this.showdata = true;
+    this.showdata = false;
     this.movie = new Movie(1, "Batman vs Superman", "Zack Snider", 2016);
     this.debug();
   }
 
   debug(){
     console.log(this.movie);
+  }
+
+  onSelect(){
+    this.showdata = true;
   }
 }

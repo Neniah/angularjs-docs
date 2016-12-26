@@ -1,6 +1,7 @@
 <h1>{{title}}</h1>
 <h3>Movie list</h3>
-<div class="row" NgIf="showdata === true">
+<button type="button" name="button" (click)="onSelect()">Show Data</button>
+<div class="row" *ngIf="showdata === true">
   <p>
     Title : <strong>{{movie.title}}</strong>
   <br>
