@@ -10,10 +10,19 @@ export class AppComponent{
   public title:string = "Movies on Angular 2";
   public movie:Movie;
   public showdata:boolean;
+  public movies;
 
   constructor(){
     this.showdata = false;
     this.movie = new Movie(1, "Batman vs Superman", "Zack Snider", 2016);
+
+    this.movies = [
+      new Movie(1, "Criminal", "Ariel Vromen", "2016"),
+      new Movie(2, "Rogue One", "Gareth Edwards", "2016"),
+      new Movie(3, "Burnt", "Jhon Wells", ""),
+      new Movie(4, "Silence", "Martin Scorsese", "2016"),
+      new Movie(5, "Kundun", "Martin Scorsese", "1997")
+    ];
     this.debug();
   }
 

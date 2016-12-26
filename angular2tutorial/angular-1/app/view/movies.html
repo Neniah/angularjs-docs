@@ -17,4 +17,16 @@
     <input type="text" (keypress)="onLog(true)"  [(ngModel)]="movie.title">
   </div>
 
+  <hr>
+  <h2>Movie List</h2>
+  <div class="row" *ngFor="#movie of movies">
+    <p>
+      Title : <strong>{{movie.title}}</strong>
+    <br>
+      Director: <strong>{{movie.director}}</strong>
+    <br>
+      <li *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></li>
+    </p>
+  </div>
+
 </div>

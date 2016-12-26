@@ -26,6 +26,13 @@ System.register(["angular2/core", "./model/movie"], function(exports_1, context_
                     this.title = "Movies on Angular 2";
                     this.showdata = false;
                     this.movie = new movie_1.Movie(1, "Batman vs Superman", "Zack Snider", 2016);
+                    this.movies = [
+                        new movie_1.Movie(1, "Criminal", "Ariel Vromen", "2016"),
+                        new movie_1.Movie(2, "Rogue One", "Gareth Edwards", "2016"),
+                        new movie_1.Movie(3, "Burnt", "Jhon Wells", ""),
+                        new movie_1.Movie(4, "Silence", "Martin Scorsese", "2016"),
+                        new movie_1.Movie(5, "Kundun", "Martin Scorsese", "1997")
+                    ];
                     this.debug();
                 }
                 AppComponent.prototype.debug = function () {
