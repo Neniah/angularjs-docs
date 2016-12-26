@@ -25,7 +25,7 @@ System.register(["angular2/core", "./model/movie"], function(exports_1, context_
                 function AppComponent() {
                     this.title = "Movies on Angular 2";
                     this.showdata = false;
-                    this.movie = new movie_1.Movie(1, "Batman vs Superman", "Zack Snider", 2016);
+                    this.movie = new movie_1.Movie(1, "Batman vs Superman", "Zack Snider", "2016");
                     this.movies = [
                         new movie_1.Movie(1, "Criminal", "Ariel Vromen", "2016"),
                         new movie_1.Movie(2, "Rogue One", "Gareth Edwards", "2016"),

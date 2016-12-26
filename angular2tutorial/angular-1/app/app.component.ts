@@ -14,7 +14,7 @@ export class AppComponent{
 
   constructor(){
     this.showdata = false;
-    this.movie = new Movie(1, "Batman vs Superman", "Zack Snider", 2016);
+    this.movie = new Movie(1, "Batman vs Superman", "Zack Snider", "2016");
 
     this.movies = [
       new Movie(1, "Criminal", "Ariel Vromen", "2016"),
