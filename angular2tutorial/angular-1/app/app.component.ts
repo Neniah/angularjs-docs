@@ -1,5 +1,6 @@
 import { Component } from "angular2/core"
 import { Movie } from "./model/movie"
+import { MoviesListComponent } from "./components/movies-list.component" 
 
 @Component({
   selector: "my-app",
