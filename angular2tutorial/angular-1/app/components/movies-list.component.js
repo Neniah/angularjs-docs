@@ -23,8 +23,8 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 }
                 MoviesListComponent = __decorate([
                     core_1.Component({
-                        selector: "my-app",
-                        templateUrl: "app/view/movies.html",
+                        selector: "movies-list",
+                        templateUrl: "app/view/movies-list.html",
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MoviesListComponent);
