@@ -1,11 +1,11 @@
 import { Component } from "angular2/core"
 import { Movie } from "../model/movie"
-
+import { MoviesService} from "../services/movies.service"
 
 @Component({
   selector: "movies-list",
   templateUrl:"app/view/movies-list.html",
-
+  providers: [MoviesService]
 })
 export class MoviesListComponent{
 
