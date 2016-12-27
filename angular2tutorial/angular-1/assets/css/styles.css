@@ -15,3 +15,15 @@ h1{
 .showingData{
   display: none;
 }
+
+.movie-title{
+  cursor:pointer;
+}
+
+.movie-title:hover{
+  text-decoration:underline;
+}
+
+li{
+  list-style: none;
+}

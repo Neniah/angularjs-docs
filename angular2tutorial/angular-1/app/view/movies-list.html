@@ -17,12 +17,11 @@
 
 <hr>
 <h2>Movie List</h2>
-<div class="row" *ngFor="#movie of movies">
-  <p>
-    <span (click)="onChangeMovie(movie)">Title : <strong>{{movie.title}}</strong></span>
-  <br>
-    <span>Director: <strong>{{movie.director}}</strong></span>
-  <br>
-    <span *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></span>
-  </p>
-</div>
+<ul class="row" *ngFor="#movie of movies">
+
+    <li (click)="onChangeMovie(movie)" class="movie-title" [class.clicked]="movie == true">Title : <strong>{{movie.title}}</strong></li>
+
+    <li>Director: <strong>{{movie.director}}</strong></li>
+    <li *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></li>
+
+</ul>
