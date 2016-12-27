@@ -3,11 +3,11 @@
 <button type="button" name="button" (click)="onSelect(false)" [class.showingData]="showdata === false" >Hide Data</button>
 <div class="row" *ngIf="showdata === true">
   <p>
-    Title : <strong>{{movie.title}}</strong>
+    <span>Title : <strong>{{movie.title}}</strong></span>
   <br>
-    Director: <strong>{{movie.director}}</strong>
+    <span>Director: <strong>{{movie.director}}</strong></span>
   <br>
-    Year: <strong>{{movie.year}}</strong>
+    <span>Year: <strong>{{movie.year}}</strong></span>
   </p>
 </div>
 <div class="row">
@@ -19,10 +19,10 @@
 <h2>Movie List</h2>
 <div class="row" *ngFor="#movie of movies">
   <p>
-    Title : <strong>{{movie.title}}</strong>
+    <span (click)="onChangeMovie(movie)">Title : <strong>{{movie.title}}</strong></span>
   <br>
-    Director: <strong>{{movie.director}}</strong>
+    <span>Director: <strong>{{movie.director}}</strong></span>
   <br>
-    <li *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></li>
+    <span *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></span>
   </p>
 </div>

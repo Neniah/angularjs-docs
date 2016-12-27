@@ -41,7 +41,10 @@ export class MoviesListComponent{
     } else {
       console.log(this.movie.title);
     }
+  }
 
+  onChangeMovie(movie){
+    this.movie = movie;
   }
 
 

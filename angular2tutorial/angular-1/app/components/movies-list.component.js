@@ -49,6 +49,9 @@ System.register(["angular2/core", "../model/movie"], function(exports_1, context
                         console.log(this.movie.title);
                     }
                 };
+                MoviesListComponent.prototype.onChangeMovie = function (movie) {
+                    this.movie = movie;
+                };
                 MoviesListComponent = __decorate([
                     core_1.Component({
                         selector: "movies-list",
