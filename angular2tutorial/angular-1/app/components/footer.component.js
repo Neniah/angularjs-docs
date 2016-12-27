@@ -11,26 +11,26 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var FooterComponent;
+    var MoviesFooterComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            FooterComponent = (function () {
-                function FooterComponent() {
+            MoviesFooterComponent = (function () {
+                function MoviesFooterComponent() {
                 }
-                FooterComponent = __decorate([
+                MoviesFooterComponent = __decorate([
                     core_1.Component({
-                        selector: "my-footer",
-                        templateUrl: "app/view/footer.html",
+                        selector: "movies-footer",
+                        templateUrl: "app/view/movies-footer.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], FooterComponent);
-                return FooterComponent;
+                ], MoviesFooterComponent);
+                return MoviesFooterComponent;
             }());
-            exports_1("FooterComponent", FooterComponent);
+            exports_1("MoviesFooterComponent", MoviesFooterComponent);
         }
     }
 });

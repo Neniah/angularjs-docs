@@ -2,10 +2,10 @@ import { Component } from "angular2/core"
 
 
 @Component({
-  selector: "my-footer",
-  templateUrl:"app/view/footer.html",
+  selector: "movies-footer",
+  templateUrl:"app/view/movies-footer.html"
 
 })
-export class FooterComponent{
+export class MoviesFooterComponent{
 
 }
