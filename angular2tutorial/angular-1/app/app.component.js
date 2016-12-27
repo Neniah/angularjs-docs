@@ -30,7 +30,6 @@ System.register(["angular2/core", "./components/movies-list.component"], functio
                         selector: "my-app",
                         templateUrl: "app/view/movies.html",
                         directives: [movies_list_component_1.MoviesListComponent],
-                        styleUrls: ["../assets/css/styles.css"]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

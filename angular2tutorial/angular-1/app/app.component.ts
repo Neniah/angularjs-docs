@@ -5,7 +5,6 @@ import { MoviesListComponent } from "./components/movies-list.component"
   selector: "my-app",
   templateUrl:"app/view/movies.html",
   directives: [MoviesListComponent],
-  styleUrls: ["../assets/css/styles.css"]
 })
 export class AppComponent{
   public title:string = "Movies on Angular 2";
