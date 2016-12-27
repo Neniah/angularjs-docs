@@ -16,8 +16,6 @@ export class MoviesListComponent{
 
   constructor(){
     this.showdata = false;
-    this.selectedMovie = new Movie(1, "Criminal", "Ariel Vromen", "2016");
-
 
     this.movies = [
       new Movie(1, "Criminal", "Ariel Vromen", "2016"),
@@ -26,6 +24,7 @@ export class MoviesListComponent{
       new Movie(4, "Silence", "Martin Scorsese", "2016"),
       new Movie(5, "Kundun", "Martin Scorsese", "1997"),
     ];
+    this.selectedMovie = this.movies[0];
     this.movie = this.movies[0];
     this.debug();
   }

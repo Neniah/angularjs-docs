@@ -29,5 +29,7 @@ li{
 }
 
 .clicked{
-  font-size:30px;
+  font-size:20px;
+  color: blue;
+  font-family: Arial;
 }
