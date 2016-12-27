@@ -29,7 +29,7 @@ System.register(["angular2/core", "./components/movies-list.component"], functio
                     core_1.Component({
                         selector: "my-app",
                         templateUrl: "app/view/movies.html",
-                        directives: [movies_list_component_1.MoviesListComponent],
+                        directives: [movies_list_component_1.MoviesListComponent, MoviesFooterComponent],
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
