@@ -19,7 +19,9 @@
 <h2>Movie List</h2>
 <ul class="row" *ngFor="#movie of movies">
 
-    <li (click)="onChangeMovie(movie)" class="movie-title" [class.clicked]="movie == true">Title : <strong>{{movie.title}}</strong></li>
+    <li (click)="onChangeMovie(movie)" class="movie-title"
+    [class.clicked]="selectedMovie.id === movie.id">
+      Title : <strong>{{movie.title}}</strong></li>
 
     <li>Director: <strong>{{movie.director}}</strong></li>
     <li *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></li>

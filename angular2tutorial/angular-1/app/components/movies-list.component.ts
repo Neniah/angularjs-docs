@@ -16,7 +16,8 @@ export class MoviesListComponent{
 
   constructor(){
     this.showdata = false;
-    this.movie = new Movie(1, "Batman vs Superman", "Zack Snider", "2016");
+    this.selectedMovie = new Movie(1, "Criminal", "Ariel Vromen", "2016");
+
 
     this.movies = [
       new Movie(1, "Criminal", "Ariel Vromen", "2016"),
@@ -25,6 +26,7 @@ export class MoviesListComponent{
       new Movie(4, "Silence", "Martin Scorsese", "2016"),
       new Movie(5, "Kundun", "Martin Scorsese", "1997"),
     ];
+    this.movie = this.movies[0];
     this.debug();
   }
 
@@ -46,6 +48,7 @@ export class MoviesListComponent{
 
   onChangeMovie(movie){
     this.movie = movie;
+    this.selectedMovie = movie;
   }
 
 
