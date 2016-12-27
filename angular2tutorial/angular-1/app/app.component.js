@@ -1,4 +1,4 @@
-System.register(["angular2/core", "./model/movie", "./components/movies-list.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "./components/movies-list.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(["angular2/core", "./model/movie", "./components/movies-list.com
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, movie_1, movies_list_component_1;
+    var core_1, movies_list_component_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (movie_1_1) {
-                movie_1 = movie_1_1;
             },
             function (movies_list_component_1_1) {
                 movies_list_component_1 = movies_list_component_1_1;
@@ -27,32 +24,7 @@ System.register(["angular2/core", "./model/movie", "./components/movies-list.com
             AppComponent = (function () {
                 function AppComponent() {
                     this.title = "Movies on Angular 2";
-                    this.showdata = false;
-                    this.movie = new movie_1.Movie(1, "Batman vs Superman", "Zack Snider", "2016");
-                    this.movies = [
-                        new movie_1.Movie(1, "Criminal", "Ariel Vromen", "2016"),
-                        new movie_1.Movie(2, "Rogue One", "Gareth Edwards", "2016"),
-                        new movie_1.Movie(3, "Burnt", "Jhon Wells", ""),
-                        new movie_1.Movie(4, "Silence", "Martin Scorsese", "2016"),
-                        new movie_1.Movie(5, "Kundun", "Martin Scorsese", "1997")
-                    ];
-                    this.debug();
                 }
-                AppComponent.prototype.debug = function () {
-                    console.log(this.movie);
-                };
-                AppComponent.prototype.onSelect = function (value) {
-                    this.showdata = value;
-                };
-                AppComponent.prototype.onLog = function (title) {
-                    if (title === void 0) { title = null; }
-                    if (title == null) {
-                        console.log(this.movie);
-                    }
-                    else {
-                        console.log(this.movie.title);
-                    }
-                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "my-app",

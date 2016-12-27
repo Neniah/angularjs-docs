@@ -2,34 +2,7 @@
   <h1>{{title}}</h1>
 
   <movies-list></movies-list>
-   
-  <h3>Your Favourite Movies:</h3>
-  <button type="button" name="button" (click)="onSelect(true)" [class.showingData]="showdata === true" >Show Data</button>
-  <button type="button" name="button" (click)="onSelect(false)" [class.showingData]="showdata === false" >Hide Data</button>
-  <div class="row" *ngIf="showdata === true">
-    <p>
-      Title : <strong>{{movie.title}}</strong>
-    <br>
-      Director: <strong>{{movie.director}}</strong>
-    <br>
-      Year: <strong>{{movie.year}}</strong>
-    </p>
-  </div>
-  <div class="row">
-    Change Title:
-    <input type="text" (keypress)="onLog(true)"  [(ngModel)]="movie.title">
-  </div>
 
-  <hr>
-  <h2>Movie List</h2>
-  <div class="row" *ngFor="#movie of movies">
-    <p>
-      Title : <strong>{{movie.title}}</strong>
-    <br>
-      Director: <strong>{{movie.director}}</strong>
-    <br>
-      <li *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></li>
-    </p>
-  </div>
+  
 
 </div>
