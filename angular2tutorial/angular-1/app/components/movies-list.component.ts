@@ -14,7 +14,12 @@ export class MoviesListComponent{
   public showdata:boolean;
   public movies;
 
-  constructor(){
+  public dataService;
+
+  constructor(private _moviesService: MoviesService){
+
+    this.dataService = this._moviesService.getMovies();
+    console.log(this.dataService);
     this.showdata = false;
 
     this.movies = [

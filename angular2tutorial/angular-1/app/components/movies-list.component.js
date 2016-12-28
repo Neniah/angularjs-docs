@@ -25,7 +25,10 @@ System.register(["angular2/core", "../model/movie", "../services/movies.service"
             }],
         execute: function() {
             MoviesListComponent = (function () {
-                function MoviesListComponent() {
+                function MoviesListComponent(_moviesService) {
+                    this._moviesService = _moviesService;
+                    this.dataService = this._moviesService.getMovies();
+                    console.log(this.dataService);
                     this.showdata = false;
                     this.movies = [
                         new movie_1.Movie(1, "Criminal", "Ariel Vromen", "2016"),
@@ -63,7 +66,7 @@ System.register(["angular2/core", "../model/movie", "../services/movies.service"
                         templateUrl: "app/view/movies-list.html",
                         providers: [movies_service_1.MoviesService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [movies_service_1.MoviesService])
                 ], MoviesListComponent);
                 return MoviesListComponent;
             }());

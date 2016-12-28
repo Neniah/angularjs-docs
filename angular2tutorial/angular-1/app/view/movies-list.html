@@ -1,4 +1,7 @@
 <h3>Your Favourite Movies:</h3>
+
+{{dataService}}
+
 <button type="button" name="button" (click)="onSelect(true)" [class.showingData]="showdata === true" >Show Data</button>
 <button type="button" name="button" (click)="onSelect(false)" [class.showingData]="showdata === false" >Hide Data</button>
 <div class="row" *ngIf="showdata === true">
