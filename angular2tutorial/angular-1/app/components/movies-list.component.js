@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../model/movie", "../services/movies.service"], function(exports_1, context_1) {
+System.register(["angular2/core", "../services/movies.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(["angular2/core", "../model/movie", "../services/movies.service"
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, movie_1, movies_service_1;
+    var core_1, movies_service_1;
     var MoviesListComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (movie_1_1) {
-                movie_1 = movie_1_1;
             },
             function (movies_service_1_1) {
                 movies_service_1 = movies_service_1_1;
@@ -27,16 +24,9 @@ System.register(["angular2/core", "../model/movie", "../services/movies.service"
             MoviesListComponent = (function () {
                 function MoviesListComponent(_moviesService) {
                     this._moviesService = _moviesService;
-                    this.dataService = this._moviesService.getMovies();
                     console.log(this.dataService);
                     this.showdata = false;
-                    this.movies = [
-                        new movie_1.Movie(1, "Criminal", "Ariel Vromen", "2016"),
-                        new movie_1.Movie(2, "Rogue One", "Gareth Edwards", "2016"),
-                        new movie_1.Movie(3, "Burnt", "Jhon Wells", "2015"),
-                        new movie_1.Movie(4, "Silence", "Martin Scorsese", "2016"),
-                        new movie_1.Movie(5, "Kundun", "Martin Scorsese", "1997"),
-                    ];
+                    this.movies = this._moviesService.getMovies();
                     this.selectedMovie = this.movies[0];
                     this.movie = this.movies[0];
                     this.debug();

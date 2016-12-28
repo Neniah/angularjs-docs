@@ -18,17 +18,11 @@ export class MoviesListComponent{
 
   constructor(private _moviesService: MoviesService){
 
-    this.dataService = this._moviesService.getMovies();
     console.log(this.dataService);
     this.showdata = false;
 
-    this.movies = [
-      new Movie(1, "Criminal", "Ariel Vromen", "2016"),
-      new Movie(2, "Rogue One", "Gareth Edwards", "2016"),
-      new Movie(3, "Burnt", "Jhon Wells", "2015"),
-      new Movie(4, "Silence", "Martin Scorsese", "2016"),
-      new Movie(5, "Kundun", "Martin Scorsese", "1997"),
-    ];
+    this.movies = this._moviesService.getMovies();
+
     this.selectedMovie = this.movies[0];
     this.movie = this.movies[0];
     this.debug();
