@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(["angular2/core", "./mock.movies"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,19 +10,22 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, mock_movies_1;
     var MoviesService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (mock_movies_1_1) {
+                mock_movies_1 = mock_movies_1_1;
             }],
         execute: function() {
             MoviesService = (function () {
                 function MoviesService() {
                 }
                 MoviesService.prototype.getMovies = function () {
-                    return "Hello World from a service";
+                    return mock_movies_1.MOVIES;
                 };
                 MoviesService = __decorate([
                     core_1.Injectable(), 
