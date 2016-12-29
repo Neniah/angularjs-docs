@@ -14,7 +14,8 @@ System.register(["../model/movie"], function(exports_1, context_1) {
                 new movie_1.Movie(2, "Rogue One", "Gareth Edwards", "2016"),
                 new movie_1.Movie(3, "Burnt", "Jhon Wells", "2015"),
                 new movie_1.Movie(4, "Silence", "Martin Scorsese", "2016"),
-                new movie_1.Movie(5, "Kundun", "Martin Scorsese", "1997")
+                new movie_1.Movie(5, "Kundun", "Martin Scorsese", "1997"),
+                new movie_1.Movie(6, "The Shape Of The Things", "Neil LaBute", "2003")
             ]);
         }
     }
