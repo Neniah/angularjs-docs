@@ -1,11 +1,11 @@
 import { Component } from "angular2/core"
 
 @Component({
-  selector: "my-app",
-  templateUrl:"app/view/movies.html",
+  selector: "contact",
+  templateUrl:"app/view/contact.html",
 })
 
-export class AppComponent{
+export class ContactComponent{
   public title:string = "Contact";
 
 

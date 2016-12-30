@@ -11,27 +11,27 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var ContactComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            ContactComponent = (function () {
+                function ContactComponent() {
                     this.title = "Contact";
                 }
-                AppComponent = __decorate([
+                ContactComponent = __decorate([
                     core_1.Component({
-                        selector: "my-app",
-                        templateUrl: "app/view/movies.html",
+                        selector: "contact",
+                        templateUrl: "app/view/contact.html",
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], ContactComponent);
+                return ContactComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("ContactComponent", ContactComponent);
         }
     }
 });
