@@ -6,7 +6,7 @@ import { Component } from "angular2/core"
 })
 
 export class AppComponent{
-  public title:string = "Movies on Angular 2";
+  public title:string = "Contact";
 
 
 }
