@@ -1,6 +1,7 @@
 import { Component } from "angular2/core"
 import { MoviesListComponent } from "./components/movies-list.component"
 import { MoviesFooterComponent } from "./components/movies-footer.component"
+import { ROUTER_DIRECTIVES, RouteConfig, Router } from "angular2/router";
 
 @Component({
   selector: "my-app",
