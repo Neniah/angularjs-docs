@@ -6,8 +6,11 @@ import { ROUTER_DIRECTIVES, RouteConfig, Router } from "angular2/router";
 @Component({
   selector: "my-app",
   templateUrl:"app/view/movies.html",
-  directives: [MoviesListComponent, MoviesFooterComponent],
+  directives: [MoviesListComponent, MoviesFooterComponent, ROUTER_DIRECTIVES],
 })
+@RouteConfig([
+  {path: "/movies", name: "Movies", component: MoviesListComponent, useAsDefault: true}
+])
 export class AppComponent{
   public title:string = "Movies on Angular 2";
 

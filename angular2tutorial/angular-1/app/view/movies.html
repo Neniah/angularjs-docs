@@ -1,7 +1,13 @@
 <div class="container">
   <h1>{{title}}</h1>
-
-  <movies-list></movies-list>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['Movies']">Home</a></li>
+      <li><a href="#">Add Movie</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+<router-outlet></router-outlet>
 
   <movies-footer></movies-footer>
 
