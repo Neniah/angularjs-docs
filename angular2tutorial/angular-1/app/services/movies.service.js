@@ -27,6 +27,9 @@ System.register(["angular2/core", "./mock.movies"], function(exports_1, context_
                 MoviesService.prototype.getMovies = function () {
                     return mock_movies_1.MOVIES;
                 };
+                MoviesService.prototype.insertMovie = function (movie) {
+                    Promise.resolve(mock_movies_1.MOVIES).then(function (movies) { return movies.push(movie); });
+                };
                 MoviesService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
