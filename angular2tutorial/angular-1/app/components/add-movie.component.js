@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../model/movie"], function(exports_1, context_1) {
+System.register(["angular2/core", "../model/movie", "angular2/router"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../model/movie"], function(exports_1, context
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, movie_1;
+    var core_1, movie_1, router_1;
     var AddMovieComponent;
     return {
         setters:[
@@ -19,20 +19,25 @@ System.register(["angular2/core", "../model/movie"], function(exports_1, context
             },
             function (movie_1_1) {
                 movie_1 = movie_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
             AddMovieComponent = (function () {
-                function AddMovieComponent() {
+                function AddMovieComponent(_moviesService, _router) {
+                    this._moviesService = _moviesService;
+                    this._router = _router;
                 }
                 AddMovieComponent.prototype.onAddMovie = function (title, director, year) {
                     var movie = new movie_1.Movie(77, title, director, year);
-                    console.log(movie);
+                    this._moviesService.insertMovie(movie);
                 };
                 AddMovieComponent = __decorate([
                     core_1.Component({
                         templateUrl: "app/view/add-movie.html",
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [Object, router_1.Router])
                 ], AddMovieComponent);
                 return AddMovieComponent;
             }());
