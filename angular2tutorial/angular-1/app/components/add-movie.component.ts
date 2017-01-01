@@ -6,11 +6,12 @@ import { MoviesService } from "../services/movies.service"
 
 @Component({
   templateUrl:"app/view/add-movie.html",
+  providers: [MoviesService]
 })
 
 export class AddMovieComponent{
 
-  constructor(private _moviesService, private _router: Router){
+  constructor(private _moviesService: MoviesService, private _router: Router){
 
   }
 
