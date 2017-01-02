@@ -23,7 +23,7 @@
 <ul class="row" *ngFor="#movie of movies">
 
     <li (click)="onChangeMovie(movie)" class="movie-title"
-    [class.clicked]="selectedMovie.id === movie.id">
+    [class.clicked]="selectedMovie.title === movie.title">
       Title : <strong>{{movie.title}}</strong></li>
 
     <li>Director: <strong>{{movie.director}}</strong></li>
