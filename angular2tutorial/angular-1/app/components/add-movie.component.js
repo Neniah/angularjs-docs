@@ -35,6 +35,8 @@ System.register(["angular2/core", "../model/movie", "angular2/router", "../servi
                 AddMovieComponent.prototype.onAddMovie = function (title, director, year) {
                     var movie = new movie_1.Movie(77, title, director, year);
                     this._moviesService.insertMovie(movie);
+                    //redirect
+                    this._router.navigate(["Movies"]);
                 };
                 AddMovieComponent = __decorate([
                     core_1.Component({

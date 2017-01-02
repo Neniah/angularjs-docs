@@ -19,6 +19,9 @@ export class AddMovieComponent{
     let movie: Movie = new Movie(77, title, director, year);
     this._moviesService.insertMovie(movie);
 
+    //redirect
+    this._router.navigate(["Movies"]);
+
 
   }
 
