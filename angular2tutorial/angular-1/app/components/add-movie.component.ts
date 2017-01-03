@@ -1,7 +1,9 @@
 import { Component } from "angular2/core"
+import { OnInit } from "angular2/core"
 import { Movie } from "../model/movie"
 import { Router } from "angular2/router"
 import { MoviesService } from "../services/movies.service"
+
 
 
 @Component({
@@ -9,7 +11,9 @@ import { MoviesService } from "../services/movies.service"
   providers: [MoviesService]
 })
 
-export class AddMovieComponent{
+export class AddMovieComponent implements OnInit{
+
+  public TitleMovie = "";
 
   constructor(private _moviesService: MoviesService, private _router: Router){
 
@@ -21,8 +25,10 @@ export class AddMovieComponent{
 
     //redirect
     this._router.navigate(["Movies"]);
+  }
 
-
+  ngOnInit(){
+    
   }
 
 }
