@@ -1,11 +1,13 @@
 <h2>Add Movie</h2>
+<form #myform="ngForm" (ngSubmit)="onSubmit()">
 <p>Title:
-  <input type="text" #title value={{TitleMovie}}/>
+  <input type="text" #title="ngForm" ngControl="title" [(ngModel)]="newMovie.title"/>
 </p>
 <p>Director:
-  <input type="text" #director />
+  <input type="text" #director="ngForm" ngControl="director" [(ngModel)]="newMovie.director"/>
 </p>
 <p>Year:
-  <input type="text" #year />
+  <input type="text" #year="ngForm" ngControl="year" [(ngModel)]="newMovie.year"/>
 </p>
-<input type="submit" name="" value="Add Movie" (click)="onAddMovie(title.value, director.value, year.value)" />
+<input type="submit" name="" value="Add Movie" />
+</form>

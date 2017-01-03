@@ -27,6 +27,11 @@
       Title : <strong>{{movie.title}}</strong></li>
 
     <li>Director: <strong>{{movie.director}}</strong></li>
+
     <li *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></li>
+
+    <li><a [routerLink]="['AddMovie', {title: movie.title}]">Add Remake</a></li>
+
+
 
 </ul>

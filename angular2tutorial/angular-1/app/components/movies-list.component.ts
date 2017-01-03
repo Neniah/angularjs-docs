@@ -1,11 +1,13 @@
 import { Component } from "angular2/core"
 import { Movie } from "../model/movie"
 import { MoviesService } from "../services/movies.service"
+import { ROUTER_DIRECTIVES, RouteConfig, Router } from "angular2/router"
 
 @Component({
   selector: "movies-list",
   templateUrl:"app/view/movies-list.html",
-  providers: [MoviesService]
+  providers: [MoviesService],
+  directives: [ROUTER_DIRECTIVES]
 })
 export class MoviesListComponent{
 
