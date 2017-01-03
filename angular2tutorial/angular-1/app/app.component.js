@@ -48,7 +48,8 @@ System.register(["angular2/core", "./components/movies-list.component", "./compo
                     router_1.RouteConfig([
                         { path: "/movies", name: "Movies", component: movies_list_component_1.MoviesListComponent, useAsDefault: true },
                         { path: "/contact", name: "Contact", component: contact_component_1.ContactComponent },
-                        { path: "/add-movie", name: "AddMovie", component: add_movie_component_1.AddMovieComponent }
+                        { path: "/add-movie", name: "AddMovie", component: add_movie_component_1.AddMovieComponent },
+                        { path: "/add-movie/:title", name: "AddMovieTitle", component: add_movie_component_1.AddMovieComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
