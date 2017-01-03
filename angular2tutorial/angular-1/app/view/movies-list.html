@@ -30,7 +30,7 @@
 
     <li *ngIf="movie.year">Year: <strong >{{movie.year}}</strong></li>
 
-    <li><a [routerLink]="['AddMovie', {title: movie.title}]">Add Remake</a></li>
+    <li><a [routerLink]="['AddRemake', {title: movie.title, director: movie.director, year: movie.year}]">Add Remake</a></li>
 
 
 

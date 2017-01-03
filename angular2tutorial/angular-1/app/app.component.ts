@@ -17,7 +17,7 @@ import { AddMovieComponent } from "./components/add-movie.component"
   {path: "/movies", name: "Movies", component: MoviesListComponent, useAsDefault: true},
   {path: "/contact", name: "Contact", component: ContactComponent},
   {path: "/add-movie", name: "AddMovie", component: AddMovieComponent},
-  {path: "/add-movie/:title", name: "AddMovieTitle", component: AddMovieComponent}
+  {path: "/add-movie/:title/:director/:year", name: "AddRemake", component: AddMovieComponent}
 ])
 export class AppComponent{
   public title:string = "Movies on Angular 2";
