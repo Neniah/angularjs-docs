@@ -28,9 +28,10 @@ System.register(["angular2/core", "../model/movie", "angular2/router", "../servi
             }],
         execute: function() {
             AddMovieComponent = (function () {
-                function AddMovieComponent(_moviesService, _router) {
+                function AddMovieComponent(_moviesService, _router, _routeParams) {
                     this._moviesService = _moviesService;
                     this._router = _router;
+                    this._routeParams = _routeParams;
                     this.TitleMovie = "";
                 }
                 AddMovieComponent.prototype.onAddMovie = function (title, director, year) {
@@ -40,13 +41,14 @@ System.register(["angular2/core", "../model/movie", "angular2/router", "../servi
                     this._router.navigate(["Movies"]);
                 };
                 AddMovieComponent.prototype.ngOnInit = function () {
+                    this.TitleMovie = this._routeParams.get("title");
                 };
                 AddMovieComponent = __decorate([
                     core_1.Component({
                         templateUrl: "app/view/add-movie.html",
                         providers: [movies_service_1.MoviesService]
                     }), 
-                    __metadata('design:paramtypes', [movies_service_1.MoviesService, router_1.Router])
+                    __metadata('design:paramtypes', [movies_service_1.MoviesService, router_1.Router, router_1.RouteParams])
                 ], AddMovieComponent);
                 return AddMovieComponent;
             }());

@@ -1,7 +1,7 @@
 import { Component } from "angular2/core"
 import { OnInit } from "angular2/core"
 import { Movie } from "../model/movie"
-import { Router } from "angular2/router"
+import { Router, RouteParams } from "angular2/router"
 import { MoviesService } from "../services/movies.service"
 
 
@@ -15,7 +15,8 @@ export class AddMovieComponent implements OnInit{
 
   public TitleMovie = "";
 
-  constructor(private _moviesService: MoviesService, private _router: Router){
+  constructor(private _moviesService: MoviesService,
+    private _router: Router, private _routeParams :RouteParams){
 
   }
 
@@ -27,8 +28,8 @@ export class AddMovieComponent implements OnInit{
     this._router.navigate(["Movies"]);
   }
 
-  ngOnInit(){
-    
+  ngOnInit():any{
+    this.TitleMovie = this._routeParams.get("title");
   }
 
 }
