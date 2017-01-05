@@ -1,0 +1,37 @@
+<h1>{{titulo}}</h1>
+<form #formRestaurante="ngForm" (ngSubmit)="onSubmit()">
+
+<label>Nombre:</label>
+<p>
+	<input type="text" #nombre="ngForm" ngControl="nombre" [(ngModel)]="restaurante.nombre" required/>
+	<span *ngIf="!nombre.valid">El nombre es obligatorio</span>
+</p>
+
+<label>Dirección:</label>
+<p>
+	<input type="text" #direccion="ngForm" ngControl="direccion" [(ngModel)]="restaurante.direccion" required/>
+	<span *ngIf="!direccion.valid">La dirección es obligatoria</span>
+</p>
+
+<label>Descripción:</label>
+<p>
+	<textarea #descripcion="ngForm" ngControl="descripcion" [(ngModel)]="restaurante.descripcion" required></textarea>
+	<span *ngIf="!descripcion.valid">La descripción es obligatoria</span>
+</p>
+
+<label>Precio:</label>
+<p>
+	<select (change)="callPrecio(precio.value)" #precio>
+		<option value="bajo" [attr.selected]="restaurante.precio === 'bajo' ? 'selected' : null">Bajo</option>
+		<option value="normal" [attr.selected]="restaurante.precio === 'normal' ? 'selected' : null">Normal</option>
+		<option value="alto" [attr.selected]="restaurante.precio === 'alto' ? 'selected' : null">Alto</option>
+	</select>
+</p>
+
+<label>Imagen:</label>
+<p>
+	<input type="file" placeholder="Subir imagen..." (change)="fileChangeEvent($event)"/>
+</p>
+
+<input type="submit" value="{{titulo}}" [disabled]="!formRestaurante.form.valid" />
+</form>
