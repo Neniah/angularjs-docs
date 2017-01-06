@@ -20,16 +20,16 @@ $clients = array(); //creamos un array
 while($row = mysqli_fetch_array($result))
 {
 	$id=$row['id'];
-	$nombre=$row['name'];
-	$edad=$row['age'];
-	$genero=$row['genre'];
+	$name=$row['name'];
+	$age=$row['age'];
+	$genre=$row['genre'];
 	$email=$row['email'];
-	$localidad=$row['city'];
-	$telefono=$row['phone'];
+	$city=$row['city'];
+	$phone=$row['phone'];
 
 
-	$clients[] = array('id'=> $id, 'nombre'=> $nombre, 'edad'=> $edad, 'genero'=> $genero,
-						'email'=> $email, 'localidad'=> $localidad, 'telefono'=> $telefono);
+	$clients[] = array('id'=> $id, 'name'=> $name, 'age'=> $age, 'genre'=> $genre,
+						'email'=> $email, 'city'=> $city, 'phone'=> $phone);
 
 }
 
@@ -40,7 +40,7 @@ or die("Ha sucedido un error inexperado en la desconexion de la base de datos");
 
 //Creamos el JSON
 //$clientes['clientes'] = $clientes;
-$json_string = json_encode($clientes);
+$json_string = json_encode($clients);
 echo $json_string;
 
 //Si queremos crear un archivo json, sería de esta forma:
