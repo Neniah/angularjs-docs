@@ -5,7 +5,8 @@
 <title>Parsear o leer JSON con jQuery - EjemploCodigo</title>
 <link rel="stylesheet" href="cssestilo.css">
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" >
+</script>
 
 
 
@@ -43,17 +44,17 @@
 			$(document).ready(function(){
 				var url="generarJSON.php";
 				$("#tablajson tbody").html("");
-				$.getJSON(url,function(clientes){
-					$.each(clientes, function(i,cliente){
+				$.getJSON(url,function(clients){
+					$.each(clients, function(i,cliente){
 					var newRow =
 					"<tr>"
 					+"<td>"+cliente.id+"</td>"
-					+"<td>"+cliente.nombre+"</td>"
-					+"<td>"+cliente.edad+"</td>"
-					+"<td>"+cliente.genero+"</td>"
+					+"<td>"+cliente.name+"</td>"
+					+"<td>"+cliente.age+"</td>"
+					+"<td>"+cliente.genre+"</td>"
 					+"<td>"+cliente.email+"</td>"
-					+"<td>"+cliente.localidad+"</td>"
-					+"<td>"+cliente.telefono+"</td>"
+					+"<td>"+cliente.city+"</td>"
+					+"<td>"+cliente.phone+"</td>"
 					+"</tr>";
 					$(newRow).appendTo("#tablajson tbody");
 					});
