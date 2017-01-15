@@ -9,6 +9,9 @@
     <title>Geogram</title>
   </head>
   <body>
-
+    <form>
+      <input type="text" name="location" value="">
+      <button type="submit" name="button">Submit</button>
+    </form>
   </body>
 </html>
