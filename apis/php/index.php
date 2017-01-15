@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <form class="" action="add.php" method="post">
+    <form class="" action="add.php" method="post" id="add">
       <input type="text" name="first" > +
       <input type="text" name="second" >
       <input type="submit" value="Work this out">
