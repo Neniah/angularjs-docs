@@ -4,7 +4,11 @@
   $output = '<ul>';
   foreach($json['movies'] as $movie){
     $output .= '<h4>' .$movie['title'].'</h4>';
-    $output .= '<li>'.$movie['year'].'</li>';
+    $output .= '<li>Year: '.$movie['year'].'</li>';
+    $output .= '<li>Director: '.$movie['director'].'</li>';
+    $output .= '<li>Genre: '.$movie['genre'].'</li>';
+
   }
+  $output .= "</ul>";
   echo $output;
 ?>
