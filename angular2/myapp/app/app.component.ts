@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `<h1>
     Hello {{name}}</h1>
     <p>Email: {{email}}</p>
+    <p>{{address.street}} {{address.city}}, {{address.state}}</p>
     `,
 })
 export class AppComponent  {
