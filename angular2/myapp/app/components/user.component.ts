@@ -15,6 +15,10 @@ export class UserComponent  {
     street: '12 Main St',
     city: 'Boston',
     state: 'MA'
-  };
+  }
+
+  constructor(){
+    this.name = 'Sam Smith';
+  }
 
 }
