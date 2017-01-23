@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <p>Email: {{email}}</p>
     <p>{{address.street}} {{address.city}}, {{address.state}}</p>
 
-    <button (click)="toggleHobbies()">Show Hobbies</button>
+    <button (click)="toggleHobbies()">{{showHobbies ? "Hide Hobbies" : "Show Hobbies"}}</button>
     <div *ngIf="showHobbies">
       <h3>Hobbies</h3>
       <ul>
@@ -37,7 +37,11 @@ export class UserComponent  {
     this.showHobbies = false;
   }
   toggleHobbies(){
-    console.log('show');
+    if(this.showHobbies == true){
+      this.showHobbies = false;
+    }else{
+      this.showHobbies = true;
+    }
   }
 }
 
