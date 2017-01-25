@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostsService } from '../services/post.service'
 
 @Component({
   selector: 'user',
@@ -36,6 +37,7 @@ import { Component } from '@angular/core';
 
     </form>
     `,
+    providers: [PostsService]
 })
 export class UserComponent  {
   name:string;
