@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
     <div *ngIf="showHobbies">
       <h3>Hobbies</h3>
       <ul>
-        <li *ngFor="let hobby of hobbies">
-          {{hobby}} <button (click)="deleteHobby()">
+        <li *ngFor="let hobby of hobbies; let i = index">
+          {{hobby}} <button (click)="deleteHobby(i)">X</button>
         </li>
       </ul>
       <form (submit)="addHobby(hobby.value)">
@@ -65,6 +65,10 @@ export class UserComponent  {
 
   addHobby(hobby: string){
     this.hobbies.push(hobby);
+  }
+
+  deleteHobby(i: number){
+    this.hobbies.splice(i, 1);
   }
 }
 
