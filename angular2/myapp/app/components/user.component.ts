@@ -36,6 +36,12 @@ import { PostsService } from '../services/post.service'
       <input type="text" name="address.state" [(ngModel)]="address.state"><br>
 
     </form>
+    <hr>
+    <h3>Post</h3>
+    <div *ngFor="let post of posts">
+      <h3>{{post.title}}</h3>
+      <p>{{post.body}}</p>
+    </div>
     `,
     providers: [PostsService]
 })
@@ -45,8 +51,9 @@ export class UserComponent  {
   address: address;
   hobbies: string[];
   showHobbies: boolean;
+  posts:Post[];
 
-  constructor(){
+  constructor(private postsService: PostsService){
     this.name = 'Jane Doe';
     this.email = 'jane@email.com';
     this.address = {
@@ -56,6 +63,10 @@ export class UserComponent  {
     }
     this.hobbies = ['Music', 'Movies', 'Sports'];
     this.showHobbies = false;
+
+    this.postsService.getPosts().subscribe(posts => {
+      this.posts = posts;
+    })
   }
   toggleHobbies(){
     if(this.showHobbies == true){
@@ -78,4 +89,10 @@ interface address{
   street:string;
   city:string;
   state:string;
+}
+
+interface Post{
+  id: number;
+  title: string;
+  body: string;
 }
