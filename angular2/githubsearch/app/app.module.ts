@@ -6,7 +6,7 @@ import { ProfileComponent } from './components/profile.component'
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, ProfileComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
