@@ -1,1 +1,19 @@
-<h3>Profile</h3>
+<div *ngIf="user">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{user.name}}</h3>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img class="profile-img img-thumbnail" src="{{user.avatar_url}}" alt="">
+        <a href="{{user.html_url}}" taget="_blank"class="btn btn-primary btn-block">View Profile</a>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+
+    </div>
+  </div>
+</div>
