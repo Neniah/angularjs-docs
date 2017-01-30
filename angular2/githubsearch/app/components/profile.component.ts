@@ -8,8 +8,8 @@ import 'rxjs/add/operator/map';
   templateUrl: `profile.component.html`,
 })
 export class ProfileComponent  {
-  user[];
-  repos[];
+  user:any[];
+  repos:any[];
 
   constructor(private _githubService:GithubService){
     this._githubService.getUser().subscribe(user => {
@@ -20,5 +20,9 @@ export class ProfileComponent  {
       console.log(repos);
       this.repos = repos;
     })
+  }
+
+  searchUser(){
+    console.log('it Works');
   }
 }
