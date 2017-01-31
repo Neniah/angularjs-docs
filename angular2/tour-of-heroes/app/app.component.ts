@@ -24,10 +24,20 @@ const HEROES: Hero[] = [
         <h1>{{title}}</h1>
         <h2>My Heroes</h2>
         <ul class="heroes">
-          <li *ngFor="let hero of heroes">
+          <li *ngFor="let hero of heroes"
+              [class.selected]="hero === selectedHero"
+              (click)="onSelect(hero)">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
           </li>
         </ul>
+        <div *ngIf="selectedHero">
+          <h2>{{selectedHero.name}} details!</h2>
+          <div><label>id: </label>{{selectedHero.id}}</div>
+          <div>
+            <label>name: </label>
+            <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+          </div>
+        </div>
           `,
     styles: [`
       .selected{
@@ -61,13 +71,13 @@ const HEROES: Hero[] = [
       }
       .heroes .text{
         position:relative;
-        top:-3px;
+        top:-2px;
       }
       .heroes .badge{
         display: inline-block;
         font-size: small;
         color:white;
-        padding: 0.8em 0.7em 0 0.7em;
+        padding: 1em 0.7em 0.4em 0.7em;
         background-color: #607d8b;
         line-height: 1em;
         position: relative;
