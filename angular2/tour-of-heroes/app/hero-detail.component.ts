@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { HeroService } from './hero.service';
+import { Hero } from './hero';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -29,4 +30,10 @@ export class HeroDetailComponent{
 
   }
   @Input() hero: Hero;
+
+  ngOnInit(): void{
+    this.route.params
+      .switchMap((params: Params) => this.heroService.getHero(+params['id']))
+      .subscribe(hero => this.hero = hero);
+  }
 }
