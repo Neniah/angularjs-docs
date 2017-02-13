@@ -6,7 +6,9 @@ import { HeroService } from './hero.service';
 
 
 @Component({
+  moduleId: module.id,
   selector: 'my-heroes',
+  templateUrl: './heroes.component.html',
   template: `
         <h1>{{title}}</h1>
         <h2>My Heroes</h2>
