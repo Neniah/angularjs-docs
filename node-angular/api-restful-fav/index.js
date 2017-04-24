@@ -11,7 +11,16 @@ app.use(bodyParser.json());
 
 app.get('/test/:name?', function(req, res){
 
-  res.status(200).send({data[2,3,4],message: "Hello world with NodeJS and Express" });
+  if(){
+    var name = req.params.name;
+  }else {
+    var name = "Without name";
+  }
+  var name = req.params.name;
+
+  res.status(200).send({
+    data: [2,3,4],
+    message: "Hello world with NodeJS and Express - " + name });
 });
 
 app.listen(port, function(){
