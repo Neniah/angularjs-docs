@@ -9,7 +9,7 @@ var port = process.env.PORT || 3678;
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.get('/prueba', function(req, res){
+app.get('/test/:name?', function(req, res){
 
   res.status(200).send({data[2,3,4],message: "Hello world with NodeJS and Express" });
 });
