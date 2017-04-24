@@ -9,17 +9,17 @@ var num2 = parseFloat(args[2]);
 var result = '\n Insert the arguments \n';
 
 if(args.length == 3){
-  switch(operation){
-    case 'sum'
+  switch(operator){
+    case 'sum':
       result = 'Sum: ' + parseFloat(num1 + num2);
       break;
-    case 'less'
+    case 'less':
       result = 'Subtraction: ' + parseFloat(num1 - num2);
       break;
-    case 'times'
+    case 'times':
       result = 'Multiplication: ' + parseFloat(num1 * num2);
       break;
-    case 'by'
+    case 'by':
       result = 'Division: ' + parseFloat(num1 / num2);
       break;
 
@@ -27,4 +27,4 @@ if(args.length == 3){
   }
 }
 
-console.log(args);
+console.log(result);
